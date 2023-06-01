@@ -26,14 +26,14 @@ function getMealList() {
                         </div>
                         <div class = "meal-name">
                             <h3>${meal.strMeal}</h3>
-                            <a href = "#" class = "recipe-btn">Get Recipe</a>
+                            <a href = "#" class = "recipe-btn">Learn More</a>
                         </div>
                     </div>
                 `;
         });
         mealList.classList.remove("notFound");
       } else {
-        html = "Sorry, we didn't find any meal!";
+        html = "Sorry, we don't have any recipe for that ingredient at this moment!";
         mealList.classList.add("notFound");
       }
 
@@ -67,7 +67,7 @@ function mealRecipeModal(meal) {
             <img src = "${meal.strMealThumb}" alt = "">
         </div>
         <div class = "recipe-link">
-            <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
+            <a href = "${meal.strYoutube}" target = "_blank">Watch Tutorial</a>
         </div>
     `;
   mealDetailsContent.innerHTML = html;
